@@ -6,7 +6,7 @@ require 'base64'
 require 'json'
 require 'date'
 require 'octokit'
-require 'pry'
+#require 'pry'
 
 class Application < Sinatra::Base
 	register SinatraMore::RoutingPlugin
