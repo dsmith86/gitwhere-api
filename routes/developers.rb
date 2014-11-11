@@ -12,14 +12,14 @@ class Application < Sinatra::Base
 			dev_details = Array.new
 
 			developers.items.each do |developer|
-				binding.pry
+				#binding.pry
 
 				dev_details << {
 					login: developer.login
 				}
 			end
 
-			binding.pry
+			#binding.pry
 
 			dev_details.to_json
 		end
