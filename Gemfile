@@ -8,6 +8,7 @@ gem "sinatra_more"
 gem "actionmailer"
 gem "httparty"
 gem "rack-timeout"
+gem "octokit", "~> 3.0"
 
 gem "pg"
 gem "dm-postgres-adapter"

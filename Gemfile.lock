@@ -82,6 +82,8 @@ GEM
     do_postgres (0.10.14)
       data_objects (= 0.10.14)
     erubis (2.7.0)
+    faraday (0.9.0)
+      multipart-post (>= 1.2, < 3)
     fastercsv (1.5.5)
     httparty (0.13.1)
       json (~> 1.8)
@@ -97,6 +99,9 @@ GEM
     minitest (5.4.0)
     multi_json (1.10.1)
     multi_xml (0.5.5)
+    multipart-post (2.0.0)
+    octokit (3.5.2)
+      sawyer (~> 0.5.3)
     pg (0.17.1)
     polyglot (0.3.5)
     pry (0.10.0)
@@ -112,6 +117,9 @@ GEM
     rack-test (0.6.2)
       rack (>= 1.0)
     rack-timeout (0.0.4)
+    sawyer (0.5.5)
+      addressable (~> 2.3.5)
+      faraday (~> 0.8, < 0.10)
     shotgun (0.9)
       rack (>= 1.0)
     sinatra (1.4.5)
@@ -144,6 +152,7 @@ DEPENDENCIES
   data_mapper
   dm-postgres-adapter
   httparty
+  octokit (~> 3.0)
   pg
   pry
   pry-debugger
