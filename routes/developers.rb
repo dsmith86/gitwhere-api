@@ -8,6 +8,8 @@ class Application < Sinatra::Base
 
 		get :developers_by_location do |l|
 
+			l = l.gsub(/ /, '+')
+
 			results = @@github_client.search_users "location:#{l}"
 
 			return if results.items.count == 0
