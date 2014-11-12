@@ -14,6 +14,7 @@ class Application < Sinatra::Base
 	before do
 		headers['Access-Control-Allow-Headers'] = 'Origin, X-Requested-With, Content-Type, Accept'
 		headers['Access-Control-Allow-Methods'] = 'POST, GET, PUT, DELETE, OPTIONS'
+		headers['Access-Control-Allow-Origin'] = '*'
 	end
 
 	@@github_client = Octokit::Client.new \
