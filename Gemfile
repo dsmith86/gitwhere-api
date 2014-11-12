@@ -4,6 +4,7 @@ ruby "2.0.0"
 
 gem "sinatra"
 gem "sinatra-activerecord"
+gem "sinatra-cross_origin"
 gem "rake"
 gem "data_mapper"
 gem "sinatra_more"

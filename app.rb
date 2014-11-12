@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'sinatra_more/routing_plugin'
+require 'sinatra/cross_origin'
 require 'net/http'
 require 'net/https'
 require 'base64'
@@ -10,11 +11,10 @@ require 'octokit'
 
 class Application < Sinatra::Base
 	register SinatraMore::RoutingPlugin
+	register Sinatra::CrossOrigin
 
-	before do
-		headers['Access-Control-Allow-Headers'] = 'Origin, X-Requested-With, Content-Type, Accept'
-		headers['Access-Control-Allow-Methods'] = 'POST, GET, PUT, DELETE, OPTIONS'
-		headers['Access-Control-Allow-Origin'] = '*'
+	configure do
+	  enable :cross_origin
 	end
 
 	@@github_client = Octokit::Client.new \
