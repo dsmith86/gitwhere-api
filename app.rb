@@ -11,6 +11,12 @@ require 'octokit'
 class Application < Sinatra::Base
 	register SinatraMore::RoutingPlugin
 
+	before do
+		content_type :json
+		headers 'Access-Control-Allow-Origin' => '*',
+			'Access-Control-Allow-Methods' => ['OPTIONS', 'GET', 'POST']
+	end
+
 	@@github_client = Octokit::Client.new \
 				:client_id		=> "ef687912f9c30502fb14",
 				:client_secret	=> ENV['GITHUB_GITWHERE_CLIENT_SECRET']
