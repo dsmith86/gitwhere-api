@@ -18,6 +18,8 @@ class Application < Sinatra::Base
 				:etag => @@github_client.last_response.headers["x-served-by"]
 				})
 
+			location.save
+
 			#binding.pry
 
 			developers = Array.new
