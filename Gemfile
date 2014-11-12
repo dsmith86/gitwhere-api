@@ -15,8 +15,9 @@ gem "octokit", "~> 3.0"
 gem "pg"
 gem "dm-postgres-adapter"
 
+gem "pry"
+gem "pry-debugger"
+
 group :development do
-	gem "pry"
-	gem "pry-debugger"
 	gem "shotgun"
 end
