@@ -31,7 +31,7 @@ class Application < Sinatra::Base
 				}
 
 				d = Developer.first_or_create({:username => developer.login})
-				
+
 				d.attributes = dev_details
 
 				d.location = location
@@ -58,7 +58,8 @@ class Application < Sinatra::Base
 				repo_count: developer.public_repos,
 				gist_count: developer.public_gists,
 				followers: developer.followers,
-				following: developer.following
+				following: developer.following,
+				detailed: true
 			}
 
 			dev = Developer.first_or_create({:username => d})

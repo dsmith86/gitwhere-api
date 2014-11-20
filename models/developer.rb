@@ -14,5 +14,7 @@ class Developer
 	property :followers,	Integer
 	property :following,	Integer
 
+	property :detailed,		Boolean
+
 	belongs_to :location
 end
