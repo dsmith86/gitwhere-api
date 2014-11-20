@@ -26,19 +26,21 @@ class Application < Sinatra::Base
 			results.items.each do |developer|
 
 				dev_details = {
-					username: developer.login,
 					avatar: developer.avatar_url,
 					url: developer.html_url
 				}
 
-				d = Developer.new
+				d = Developer.first_or_create({:username => developer.login})
+				
 				d.attributes = dev_details
 
 				d.location = location
 
 				d.save
 
-				developers << dev_details
+				print d.name
+
+				developers << d
 			end
 
 			developers.to_json
