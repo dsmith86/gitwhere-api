@@ -3,7 +3,6 @@ class Location
 
 	property :id,				Serial
 	property :location,	String,		:required => true
-	property :etag,			String,		:required => true
 
 	has n, :developers
 end

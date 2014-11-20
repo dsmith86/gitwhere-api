@@ -12,6 +12,7 @@ gem "actionmailer"
 gem "httparty"
 gem "rack-timeout"
 gem "octokit", "~> 3.0"
+gem 'faraday-http-cache'
 
 gem "pg"
 gem "dm-postgres-adapter"
