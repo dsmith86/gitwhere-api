@@ -9,4 +9,4 @@ require_relative 'developer'
 require_relative 'location'
 
 DataMapper.finalize
-DataMapper.auto_migrate!
+DataMapper.auto_upgrade!
